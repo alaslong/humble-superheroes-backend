@@ -6,7 +6,7 @@ import { SuperheroService } from "../services/superhero.service";
 const router = Router();
 // POST /superheroes - Adds a superhero to the superheroes array.
 router.post("/", (req: Request, res: Response) => {
-console.log(req.body)
+
   try {
     // Validate the request body to ensure the data meets the requirements of the schema.
     const validatedData = SuperheroSchema.parse(req.body);
@@ -31,7 +31,7 @@ console.log(req.body)
       }
     }
   }
-  console.log(res)
+
 });
 
 // GET /superheroes - Returns superheroes in the superheroes array.
